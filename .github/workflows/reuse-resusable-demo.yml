@@ -64,13 +64,13 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: src-files
-          path: src
+          name: public-files
+          path: pub;ic
   deploy:
     needs: build
     uses: ./.github/workflows/reusable-workflow.yml
     with:
-        artifact-name: src-files
+        artifact-name: public-files
   report:
     needs: [lint, deploy]
     if: failure()
