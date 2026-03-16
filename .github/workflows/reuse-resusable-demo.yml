@@ -65,7 +65,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: public-files
-          path: pub;ic
+          path: public
   deploy:
     needs: build
     uses: ./.github/workflows/reusable-workflow.yml
